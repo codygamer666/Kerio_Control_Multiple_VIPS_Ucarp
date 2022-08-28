@@ -99,4 +99,4 @@ After this I need to create a new set of firewall rules to map my service:
 
 This is an unofficial mod. It was tested with Kerio Control 9.3.6 patch 1 build 5808 and may stop working with future releases.
 
-If you encounter any issues or just for feedback use github to report any of those.
+If you encounter any issues feel free to open a new issue.
