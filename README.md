@@ -73,3 +73,22 @@
   ```
   
 10) Repeat the same process with the second node
+
+11) Create the first firewall rule
+
+12) Turn off the master node and check the active connections section of the slave node to see if the ha works. When the master node is online again all the new connections will go to the master node.
+
+
+
+## Real world example:
+
+Subnet x.x.60.0/24, Firewall A x.x.60.1, Firewall B x.x.60.5, VIPS x.x.60.2 and x.x.60.3
+
+In this situation I want to expose a service running inside the x.x.91.0/24 subnet, but I have other services to setup later on.
+
+In order not to waste other ip addresses I follow this guide above with my parameters and my two VIPS are up and running.
+
+After this I need to create a new set of firewall rules to map my service:
+
+  
+![new_rules](https://user-images.githubusercontent.com/96527590/187072908-b6c456cc-eb87-4e13-a968-697cd21262f8.jpg)
