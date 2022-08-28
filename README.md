@@ -92,3 +92,11 @@ After this I need to create a new set of firewall rules to map my service:
 
   
 ![new_rules](https://user-images.githubusercontent.com/96527590/187072908-b6c456cc-eb87-4e13-a968-697cd21262f8.jpg)
+
+
+
+## Final Notes
+
+This is an unofficial mod. It was tested with Kerio Control 9.3.6 patch 1 build 5808 and may stop working with future releases.
+
+If you encounter any issues or just for feedback use github to report any of those.
