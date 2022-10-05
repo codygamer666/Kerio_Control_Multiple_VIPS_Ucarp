@@ -71,6 +71,21 @@
   ```
   ./pub-vip-down.sh
   ```
+9.5) CRON
+  The script will not run at startup with the current configuration... we need a cron job!
+  
+- Appoint nano as the default editor:
+  ```
+  export EDITOR=nano
+  ```
+- Open the crontab:
+  ```
+  crontab -e
+  ```
+- Add the job and save:
+  ```
+  @reboot /ha-pub/pub-vip-up.sh
+  ```
   
 10) Repeat the same process with the second node
 
