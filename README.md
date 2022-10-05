@@ -7,31 +7,31 @@
   
 ## Step by step guide
 
-1) Connect to kerio control with ssh
+1. Connect to kerio control with ssh
 
    Example with powershell --> ssh 0.0.0.0 -l root
 
-2) Go to root dir
+2. Go to root dir
   ```
    / $
   ```
 
-3) Make os r/w
+3. Make os r/w
   ```
   mount -o rw,remount /
   ```
 
-4) Create script folder
+4. Create script folder
   ```
   mkdir ha-pub
   ```
 
-5) Open dir
+5. Open dir
   ```
   cd ha-pub
   ```
 
-6) Create ucarp configuration files
+6. Create ucarp configuration files
 
   nano pub-vip-up.sh
   ```
@@ -54,45 +54,47 @@
   ```
 
 
-7) Make the files executable
-  ```
-  chmod +x /ha-pub/pub-vip-up.sh /ha-pub/pub-vip-down.sh
-  ```
+7. Make the files executable
+   ```
+   chmod +x /ha-pub/pub-vip-up.sh /ha-pub/pub-vip-down.sh
+   ```
   
-8) Create pid dir
-  ```
-  mkdir /ha-pu/pids
-  ```
+8. Create pid dir
+   ```
+   mkdir /ha-pu/pids
+   ```
   
-9) Run the script
-  ./pub-vip-up.sh
+9. Run the script
+   ```
+   ./pub-vip-up.sh
+   ```
+   
+9b. Stop the script
+     ```
+     ./pub-vip-down.sh
+     ```
 
-9.1) Stop the script
-  ```
-  ./pub-vip-down.sh
-  ```
-9.5) CRON
-  The script will not run at startup with the current configuration... we need a cron job!
+9c. CRON
+    The script will not run at startup with the current configuration... we need a cron job!
   
-- Appoint nano as the default editor:
-  ```
-  export EDITOR=nano
-  ```
-- Open the crontab:
-  ```
-  crontab -e
-  ```
-- Add the job and save:
-  ```
-  @reboot /ha-pub/pub-vip-up.sh
-  ```
+    - Appoint nano as the default editor:
+     ```
+     export EDITOR=nano
+     ```
+    - Open the crontab:
+     ```
+     crontab -e
+     ```
+    - Add the job and save:
+     ```
+     @reboot /ha-pub/pub-vip-up.sh
+     ```
   
-10) Repeat the same process with the second node
+10. Repeat the same process with the second node
 
-11) Create the first firewall rule
+11. Create the first firewall rule
 
-12) Turn off the master node and check the active connections section of the slave node to see if the ha works. When the master node is online again all the new connections will go to the master node.
-
+12. Turn off the master node and check the active connections section of the slave node to see if the ha works. When the master node is online again all the new connections will go to the master node.
 
 
 ## Real world example:
