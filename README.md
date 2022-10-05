@@ -70,9 +70,9 @@
    ```
    
 9b. Stop the script
-     ```
-     ./pub-vip-down.sh
-     ```
+    ```
+    ./pub-vip-down.sh
+    ```
 
 9c. CRON
     The script will not run at startup with the current configuration... we need a cron job!
